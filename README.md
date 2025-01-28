@@ -14,3 +14,15 @@ python3.12 -m venv venv
 
 I am using Chainlit to build the UI and black for code formatting.
 
+
+```bash
+pip install chainlit black
+```
+
+or 
+
+```bash
+pip install -r requirements.txt
+```
+
+
