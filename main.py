@@ -1,6 +1,3 @@
-import os
-
-
 data = {
     "questions": [
         {
@@ -29,3 +26,19 @@ data = {
 # The data lookup will be very slow.
 
 data = {i['question']: i['answer'] for i in data['questions']}
+
+
+def main():
+    while True:
+        q = input("\nYou: ")
+
+        if q == "exit":
+            print("\n\nThank you")
+            break
+
+        print("\n\n")
+        print(f"Agent: {data[q]}")
+
+
+if __name__ == "__main__":
+    main()
