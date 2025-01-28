@@ -29,16 +29,17 @@ data = {i['question']: i['answer'] for i in data['questions']}
 
 
 def main():
+    print("\n")
     while True:
-        q = input("\nYou: ")
+        q = input("You: ")
 
         if q == "exit":
-            print("\n\nThank you")
+            print("\nThank you")
             break
 
-        print("\n\n")
+        print("—"*150)
         print(f"Agent: {data[q]}")
-
+        print("—"*150)
 
 if __name__ == "__main__":
     main()
