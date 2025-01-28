@@ -25,4 +25,15 @@ or
 pip install -r requirements.txt
 ```
 
+## Run
+
+Running it is quite simple:
+
+```bash
+chainlit run main.py   
+```
+
+![image](screenshot.png)
+
+It will only answer the hardcoded questions from the thoughtful AI dataset. You can check it out in [main.py](main.py)
 
