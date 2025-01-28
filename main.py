@@ -1,4 +1,6 @@
-data = {
+import chainlit as cl
+
+raw_data = {
     "questions": [
         {
             "question": "What does the eligibility verification agent (EVA) do?",
@@ -25,22 +27,9 @@ data = {
 
 # The data lookup will be very slow.
 
-data = {i["question"]: i["answer"] for i in data["questions"]}
+data = {i["question"]: i["answer"] for i in raw_data["questions"]}
 
 
-def main():
-    print("\n")
-    while True:
-        q = input("You: ")
-
-        if q == "exit":
-            print("\nThank you")
-            break
-
-        print("—" * 150)
-        print(f"Agent: {data[q]}")
-        print("—" * 150)
-
-
-if __name__ == "__main__":
-    main()
+@cl.on_message
+async def main(message: cl.Message):
+    await cl.Message(content=data[message.content]).send()
